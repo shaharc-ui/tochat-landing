@@ -1048,6 +1048,7 @@ body{overscroll-behavior-y:contain}
       <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
         <a href="https://tochat.co.il/privacy-policy/" target="_blank" rel="noopener">מדיניות פרטיות</a>
         <a href="https://tochat.co.il/terms-of-service/" target="_blank" rel="noopener">תנאי שימוש</a>
+        <a href="#" onclick="if(window.enable_accessibility_statement){window.enable_accessibility_statement();}else{window.open('https://tochat.co.il/','_blank');}return false;" aria-label="הצהרת נגישות">הצהרת נגישות</a>
       </div>
     </div>
   </div>
@@ -1154,5 +1155,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+
+<!-- Enable Accessibility Widget (תקנת שוויון זכויות לאנשים עם מוגבלות) -->
+<script id="enable-accessibility-js" src="https://cdn.enable.co.il/licenses/enable-L60755dqntsvm6h-0720-53050/init.js?ver=1.4.1" defer></script>
 </body>
 </html>
