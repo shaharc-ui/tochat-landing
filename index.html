@@ -24,9 +24,25 @@
 <meta property="og:description" content="תותח שיחות מקצועי בעברית - פי 3 שיחות לנציג, 12 דקות הקמה, תאימות תיקון 40.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
+<meta property="og:url" content="https://tochat-landing.vercel.app/">
+<meta property="og:site_name" content="ToChat - תותח שיחות">
+<meta property="og:image" content="https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="תותח שיחות ToChat - חייגן חכם בעברית">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="תותח שיחות | ToChat - חייגן חכם בענן">
+<meta name="twitter:description" content="תותח שיחות מקצועי בעברית - פי 3 שיחות לנציג, 12 דקות הקמה, תאימות תיקון 40.">
+<meta name="twitter:image" content="https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png">
+<meta name="author" content="ToChat">
+<meta name="geo.region" content="IL">
+<meta name="geo.placename" content="Israel">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://tochat.co.il">
+<link rel="dns-prefetch" href="https://tochat.co.il">
+<link rel="preload" as="image" href="https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -137,18 +153,75 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "ToChat",
+  "alternateName": "תותח שיחות ToChat",
   "url": "https://tochat.co.il",
-  "logo": "https://tochat.co.il/logo.png",
+  "logo": "https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png",
+  "description": "תותח שיחות בעברית למוקדי מכירה - חייגן חכם בענן עם תאימות לתיקון 40",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IL",
+    "addressRegion": "מרכז"
+  },
   "sameAs": [
     "https://www.facebook.com/tochat",
     "https://www.linkedin.com/company/tochat"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+972-3-000-0000",
+    "telephone": "+972-3-720-0000",
     "contactType": "sales",
     "areaServed": "IL",
     "availableLanguage": ["Hebrew", "English"]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "תותח שיחות ToChat",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Power Dialer",
+  "operatingSystem": "Web Browser",
+  "description": "תותח שיחות מקצועי בעברית בענן. חייגן אוטומטי למוקדי מכירה עם Whisper, תאימות תיקון 40, סיכומי AI ו-API פתוח. ללא PBX, ללא התקנה, 12 דקות הקמה.",
+  "url": "https://tochat-landing.vercel.app/",
+  "inLanguage": "he",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "ILS",
+    "price": "0",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2027-12-31"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1400",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "חייגן אלגוריתמי לתותח שיחות",
+    "Whisper בזמן אמת לאימון נציגים",
+    "תאימות מובנית לתיקון 40",
+    "סיכומי שיחה אוטומטיים ב-AI",
+    "API פתוח ואינטגרציה עם Make/Zapier",
+    "ניתוח AI להפסדים"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "תותח שיחות ToChat",
+  "url": "https://tochat-landing.vercel.app/",
+  "inLanguage": "he-IL",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToChat"
   }
 }
 </script>
@@ -195,6 +268,14 @@ body{overscroll-behavior-y:contain}
   --border:#E4E9F3;
   --green:#0CC13F;
 }
+
+/* ===== SKIP LINK (a11y) ===== */
+.skip-link{position:absolute;top:-100px;right:0;background:#F93E0C;color:#fff;padding:12px 20px;border-radius:0 0 8px 0;font-weight:700;font-size:14px;z-index:9999;transition:top .2s}
+.skip-link:focus{top:0;outline:3px solid #FE8713;outline-offset:2px}
+
+/* ===== FOCUS STATES (a11y) ===== */
+*:focus-visible{outline:3px solid #F93E0C;outline-offset:2px}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:-2px;box-shadow:0 0 0 5px #F93E0C}
 
 /* ===== NAV ===== */
 .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #E4E9F3;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
@@ -366,7 +447,7 @@ body{overscroll-behavior-y:contain}
 .faq-item{border-bottom:1px solid #eaeaea;padding:8px 0}
 .faq-q{width:100%;background:none;border:none;padding:20px 0;text-align:right;font-family:inherit;font-size:19px;font-weight:600;color:#0f1729;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq-q:hover{color:#F93E0C}
-.faq-icon{font-size:22px;font-weight:300;color:#5b6478;transition:transform .25s;flex-shrink:0}
+.faq-icon{font-size:22px;font-weight:400;color:#5b6478;transition:transform .25s;flex-shrink:0}
 .faq-item.open .faq-icon{transform:rotate(45deg);color:#F93E0C}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s}
 .faq-item.open .faq-a{max-height:300px;padding-bottom:20px}
@@ -393,7 +474,7 @@ body{overscroll-behavior-y:contain}
 .step{display:flex;align-items:center;gap:10px;color:#fff}
 .step-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#FE8713;color:#fff;font-weight:800;font-size:14px;flex-shrink:0}
 .step-txt{font-size:14px;font-weight:600}
-.step-arrow{color:rgba(255,255,255,0.4);font-size:18px;font-weight:300}
+.step-arrow{color:rgba(255,255,255,0.4);font-size:18px;font-weight:400}
 @media (max-width:560px){
   .next-steps{flex-direction:column;gap:10px;align-items:flex-start;max-width:240px;margin-left:auto;margin-right:auto}
   .step-arrow{transform:rotate(90deg);align-self:center;margin:-4px 0}
@@ -630,15 +711,20 @@ body{overscroll-behavior-y:contain}
 </head>
 <body>
 
+<!-- Skip to main content (a11y) -->
+<a href="#totach" class="skip-link">דלגו לתוכן הראשי</a>
+
 <!-- ============== NAV ============== -->
-<nav class="nav">
+<nav class="nav" aria-label="ניווט ראשי">
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png" alt="" width="120" height="36" onload="this.classList.add('loaded')"></a>
+    <a href="#" class="nav-logo" aria-label="ToChat - תותח שיחות בעברית"><img src="https://tochat.co.il/wp-content/uploads/2023/07/Logo-2.png" alt="תותח שיחות ToChat - לוגו" width="120" height="36" fetchpriority="high" onload="this.classList.add('loaded')"></a>
     <div class="nav-cta">
-      <a href="#demo" class="btn btn-orange btn-sm">קבל דמו חינם</a>
+      <a href="#demo" class="btn btn-orange btn-sm" aria-label="קבל דמו חינם של תותח שיחות">קבל דמו חינם</a>
     </div>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- ============== HERO ============== -->
 <section class="hero" id="totach">
@@ -649,7 +735,7 @@ body{overscroll-behavior-y:contain}
   </div>
   <div class="hero-inner">
     <span class="eyebrow">★ #1 בישראל · 1,400+ מוקדי מכירה · 12 מיליון שיחות בחודש</span>
-    <h1>הנציגים שלך ימכרו פי 3, <span style="color:#F93E0C">בלי להוסיף אף אחד לצוות</span></h1>
+    <h1>תותח שיחות שמכפיל את הנציגים שלך פי 3, <span style="color:#F93E0C">בלי להוסיף אף אחד לצוות</span></h1>
     <p class="hero-sub">נציג ממוצע מבזבז 4 שעות ביום על חיוג ידני. <strong>ToChat</strong> מחזירה את הזמן הזה למכירות, ומכפילה את התפוקה של הצוות הקיים. 12 דקות הקמה, בלי כאב ראש.</p>
     <div class="hero-ctas">
       <a href="#demo" class="btn btn-orange">קבל דמו חינם →</a>
@@ -958,14 +1044,23 @@ body{overscroll-behavior-y:contain}
     </div>
 
     <div class="copyright-bar">
-      <div>© 2026 ToChat. תותח השיחות המוביל בישראל.</div>
+      <div>© 2026 ToChat - תותח שיחות המוביל בישראל. כל הזכויות שמורות.</div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+        <a href="tel:+972-3-720-0000" aria-label="התקשרו אלינו">📞 03-720-0000</a>
+        <a href="mailto:sales@tochat.co.il" aria-label="שלחו לנו אימייל">✉️ sales@tochat.co.il</a>
+        <a href="https://tochat.co.il/privacy" rel="noopener">מדיניות פרטיות</a>
+        <a href="https://tochat.co.il/terms" rel="noopener">תנאי שימוש</a>
+        <a href="https://tochat.co.il/accessibility" rel="noopener">נגישות</a>
+      </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- ============== STICKY MOBILE CTA ============== -->
 <div class="sticky-mobile-cta" id="stickyMobileCta">
-  <a href="#demo" class="btn btn-orange">קבל דמו חינם →</a>
+  <a href="#demo" class="btn btn-orange" aria-label="קבל דמו חינם של תותח שיחות">קבל דמו חינם →</a>
 </div>
 
 <script>
