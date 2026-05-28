@@ -1,0 +1,12 @@
+design-md/
+.git/
+.github/
+*.md
+landing_intercom.html
+landing_stripe.html
+landing_notion.html
+frame.png
+frame-early.png
+tochat-logo-temp.b64
+logo-color.b64
+.claude/

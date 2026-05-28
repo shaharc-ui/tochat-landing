@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תותח שיחות | ToChat - API פתוח, דפדפן בלבד, תאימות תיקון 40</title>
+<meta name="description" content="תותח שיחות בעברית - ToChat מאפשר עד פי 3 שיחות לנציג, 12 דקות הקמה, API פתוח, תאימות תיקון 40. קבל דמו חינם של תותח שיחות מקצועי. ללא IT, ללא PBX, ללא התחייבות.">
+<meta name="keywords" content="תותח שיחות, חייגן אוטומטי, חייגן חכם, מערכת חיוג, מוקד מכירות, ToChat, power dialer, API חייגן">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="ToChat">
+<link rel="canonical" href="https://tochat.co.il/totach-sichot">
+<meta property="og:title" content="תותח שיחות | ToChat - חייגן חכם עם API פתוח">
+<meta property="og:description" content="תותח שיחות מקצועי - עד פי 3 שיחות, 12 דקות הקמה, API פתוח, תאימות תיקון 40.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tochat.co.il/totach-sichot">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="ToChat - תותח שיחות">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="תותח שיחות | ToChat">
+<meta name="twitter:description" content="תותח שיחות עם API פתוח, דפדפן בלבד, ללא IT.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "תותח שיחות ToChat",
+      "description": "תותח שיחות מבוסס ענן עם API פתוח, תעדוף לידים אלגוריתמי, Whisper & Listen, ותאימות מלאה לתיקון 40 לחוק הספאם.",
+      "brand": {"@type": "Brand", "name": "ToChat"},
+      "category": "Business Software",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "ILS",
+        "url": "https://tochat.co.il"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "מה זה תותח שיחות?", "acceptedAnswer": {"@type": "Answer", "text": "תותח שיחות (Power Dialer) הוא מערכת חיוג אוטומטית שמחברת נציג ללידים בלי לחיצה ידנית. ToChat הוא תותח השיחות עם ה-API הפתוח הראשון בישראל - מתחבר native ל-Pipedrive, HubSpot, Monday, Salesforce. קבל דמו חינם."}},
+        {"@type": "Question", "name": "כמה זמן לוקח להתקין תותח שיחות?", "acceptedAnswer": {"@type": "Answer", "text": "12 דקות מהרישום לשיחה ראשונה עם ToChat. אין PBX, אין IP קבוע, אין התקנה."}},
+        {"@type": "Question", "name": "האם תותח שיחות תואם לתיקון 40?", "acceptedAnswer": {"@type": "Answer", "text": "כן, תותח השיחות של ToChat שומר רישום הסכמות אוטומטי, מסנכרן blacklist, ומפיק דוח רגולטורי בקליק."}},
+        {"@type": "Question", "name": "האם יש API לתותח השיחות?", "acceptedAnswer": {"@type": "Answer", "text": "כן - API פתוח לחלוטין, אינטגרציות native ל-Pipedrive, HubSpot, Monday, Salesforce. כל שאר ה-CRMs דרך Make/Zapier."}},
+        {"@type": "Question", "name": "איפה השרתים של תותח השיחות?", "acceptedAnswer": {"@type": "Answer", "text": "בישראל. תאימות GDPR + חוק הגנת הפרטיות הישראלי + SOC 2 Type II."}}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "ToChat",
+      "alternateName": "תותח שיחות ToChat",
+      "url": "https://tochat.co.il",
+      "description": "תותח שיחות מוביל בישראל - חייגן חכם בענן עם API פתוח",
+      "areaServed": "IL"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://tochat.co.il"},
+        {"@type": "ListItem", "position": 2, "name": "תותח שיחות", "item": "https://tochat.co.il/totach-sichot"}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ RESET ============ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.5;
+    color:#0d253d;
+    background:#ffffff;
+    font-feature-settings:"ss01";
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  .tnum{font-feature-settings:"ss01","tnum"}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  img,svg{display:block;max-width:100%}
+
+  /* ============ TOKENS ============ */
+  :root{
+    --indigo:#020381;
+    --indigo-deep:#010258;
+    --indigo-press:#000140;
+    --indigo-soft:#2874fc;
+    --navy-900:#020381;
+    --ruby:#ea2261;
+    --magenta:#f96bee;
+    --accent-orange:#ff6900;
+    --accent-orange-hover:#e55c00;
+    --canvas:#ffffff;
+    --canvas-soft:#f6f9fc;
+    --canvas-cream:#f5e9d4;
+    --ink:#0d253d;
+    --ink-2:#273951;
+    --ink-mute:#64748d;
+    --hairline:#e3e8ee;
+    --shadow-1:rgba(0,55,112,0.08) 0 1px 3px;
+    --shadow-2:rgba(0,55,112,0.08) 0 8px 24px, rgba(0,55,112,0.04) 0 2px 6px;
+  }
+
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ============ BUTTONS (PILL) ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    padding:8px 16px;border-radius:9999px;
+    font-size:16px;font-weight:400;line-height:1.4;
+    transition:all .15s ease;white-space:nowrap;cursor:pointer;
+    font-family:inherit;
+  }
+  .btn-primary{background:var(--indigo);color:#fff}
+  .btn-primary:hover{background:var(--indigo-deep)}
+  .btn-primary:active{background:var(--indigo-press)}
+  .btn-secondary{background:#fff;color:var(--indigo);border:1px solid var(--indigo)}
+  .btn-secondary:hover{background:#f5f3ff}
+  .btn-on-dark{background:var(--navy-900);color:#fff}
+  .btn-on-dark:hover{background:#13153e}
+  .btn-orange{background:var(--accent-orange);color:#fff;font-weight:500;box-shadow:0 2px 8px rgba(255,105,0,0.25)}
+  .btn-orange:hover{background:var(--accent-orange-hover);box-shadow:0 4px 14px rgba(255,105,0,0.35)}
+  .btn-arrow{transform:scaleX(-1);display:inline-block;margin-right:2px}
+
+  /* ============ EYEBROW ============ */
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;font-weight:500;letter-spacing:.08em;
+    color:var(--indigo);text-transform:uppercase;
+    background:rgba(2,3,129,0.08);
+    padding:6px 12px;border-radius:9999px;
+    margin-bottom:20px;
+    font-feature-settings:"ss01";
+  }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1,h2,h3,h4{font-weight:300;color:var(--ink);font-feature-settings:"ss01"}
+  .display-xxl{
+    font-size:56px;font-weight:300;
+    letter-spacing:-1.4px;line-height:1.08;
+  }
+  .display-lg{
+    font-size:40px;font-weight:300;
+    letter-spacing:-1px;line-height:1.12;
+  }
+  .display-md{
+    font-size:26px;font-weight:300;
+    letter-spacing:-0.26px;line-height:1.2;
+  }
+  .lead{
+    font-size:20px;font-weight:300;
+    line-height:1.5;color:var(--ink-mute);
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;
+    transition:all .2s ease;
+  }
+  .nav.scrolled{background:rgba(255,255,255,0.92);border-bottom-color:var(--hairline)}
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:32px;
+  }
+  .logo{
+    font-size:22px;font-weight:400;color:var(--ink);
+    letter-spacing:-0.4px;font-feature-settings:"ss01";
+  }
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{
+    font-size:15px;font-weight:400;color:var(--ink-2);
+    transition:color .15s;
+  }
+  .nav-links a:hover{color:var(--indigo)}
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  .nav-login{font-size:15px;font-weight:400;color:var(--ink-2)}
+  .nav-login:hover{color:var(--indigo)}
+  @media(max-width:768px){
+    .nav-links{display:none}
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:80px 0 100px;
+    overflow:hidden;
+  }
+  .gradient-mesh{
+    position:absolute;
+    top:-100px;left:-10%;right:-10%;
+    height:70%;
+    background:linear-gradient(95deg,
+      #f5e9d4 0%,
+      #ffcfa3 22%,
+      #ff6900 45%,
+      #2874fc 72%,
+      #020381 95%);
+    opacity:0.55;
+    filter:blur(80px);
+    z-index:-1;
+    border-radius:50%;
+    transform:translateZ(0);
+  }
+  .gradient-mesh::after{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 70% 30%, rgba(255,105,0,0.4), transparent 50%),
+               radial-gradient(circle at 20% 60%, rgba(2,3,129,0.4), transparent 50%);
+    filter:blur(40px);
+  }
+  .hero-inner{position:relative;z-index:1;text-align:center;max-width:900px;margin:0 auto}
+  .hero h1{margin:16px 0 24px}
+  .hero .lead{max-width:700px;margin:0 auto 36px}
+  .hero-ctas{display:flex;gap:12px;justify-content:center;margin-bottom:64px;flex-wrap:wrap}
+
+  .trust-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    max-width:900px;margin:0 auto 48px;
+  }
+  .trust-stat{text-align:center}
+  .trust-stat-num{
+    font-size:36px;font-weight:300;color:var(--ink);
+    letter-spacing:-0.8px;line-height:1;margin-bottom:8px;
+    font-feature-settings:"ss01","tnum";
+  }
+  .trust-stat-label{font-size:14px;color:var(--ink-mute);font-weight:400}
+
+  .trust-row{text-align:center}
+  .trust-row-label{
+    font-size:13px;color:var(--ink-mute);font-weight:400;
+    text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;
+  }
+  .trust-logos{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:32px;
+    align-items:center;
+  }
+  .trust-logo{
+    font-size:15px;font-weight:500;color:var(--ink-mute);
+    opacity:0.7;letter-spacing:-0.2px;
+  }
+
+  @media(max-width:768px){
+    .display-xxl{font-size:38px;letter-spacing:-0.8px}
+    .display-lg{font-size:30px;letter-spacing:-0.6px}
+    .lead{font-size:17px}
+    .hero{padding:48px 0 60px}
+    .trust-stats{grid-template-columns:repeat(2,1fr);gap:24px 12px}
+    .trust-stat-num{font-size:28px}
+    .trust-logos{gap:16px}
+    .trust-logo{font-size:13px}
+  }
+
+  /* ============ SECTION GENERIC ============ */
+  section{padding:96px 0}
+  .section-cream{background:var(--canvas-cream)}
+  .section-soft{background:var(--canvas-soft)}
+  .section-head{max-width:760px;margin:0 auto 56px;text-align:center}
+  .section-head h2{margin-bottom:16px}
+  @media(max-width:768px){
+    section{padding:64px 0}
+    .section-head{margin-bottom:40px}
+  }
+
+  /* ============ DASHBOARD MOCKUP ============ */
+  .dashboard{
+    background:#fff;border-radius:12px;
+    box-shadow:var(--shadow-2);
+    padding:24px;max-width:980px;margin:0 auto;
+    border:1px solid var(--hairline);
+  }
+  .dash-kpis{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;
+  }
+  .kpi{
+    background:var(--canvas-soft);border-radius:10px;padding:16px;
+    border:1px solid var(--hairline);
+  }
+  .kpi-label{font-size:12px;color:var(--ink-mute);font-weight:400;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+  .kpi-value{
+    font-size:24px;font-weight:400;color:var(--ink);letter-spacing:-0.4px;
+    font-feature-settings:"ss01","tnum";
+  }
+  .kpi-value strong{font-weight:500;color:var(--indigo)}
+
+  .dash-table-title{
+    font-size:15px;font-weight:500;color:var(--ink);margin-bottom:12px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .live-dot{
+    width:8px;height:8px;border-radius:50%;background:var(--ruby);
+    animation:pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse{50%{opacity:0.4}}
+
+  .dash-table{
+    width:100%;border-collapse:collapse;
+    font-feature-settings:"ss01","tnum";
+  }
+  .dash-table th{
+    text-align:right;padding:10px 12px;
+    font-size:12px;font-weight:500;color:var(--ink-mute);
+    text-transform:uppercase;letter-spacing:.04em;
+    border-bottom:1px solid var(--hairline);
+  }
+  .dash-table td{
+    padding:14px 12px;font-size:14px;color:var(--ink-2);font-weight:400;
+    border-bottom:1px solid var(--hairline);
+  }
+  .dash-table tr:last-child td{border-bottom:none}
+  .badge-live{
+    display:inline-flex;align-items:center;gap:6px;
+    background:rgba(234,34,97,0.08);color:var(--ruby);
+    padding:4px 10px;border-radius:9999px;
+    font-size:12px;font-weight:500;
+  }
+  .badge-live::before{
+    content:'';width:6px;height:6px;border-radius:50%;background:var(--ruby);
+    animation:pulse 1.5s ease-in-out infinite;
+  }
+  .badge-hot{
+    background:rgba(83,58,253,0.08);color:var(--indigo);
+    padding:4px 10px;border-radius:9999px;
+    font-size:12px;font-weight:500;
+  }
+  @media(max-width:768px){
+    .dash-kpis{grid-template-columns:repeat(2,1fr)}
+    .dashboard{padding:16px}
+    .dash-table{font-size:13px}
+    .dash-table th,.dash-table td{padding:10px 8px}
+  }
+
+  /* ============ FEATURES GRID ============ */
+  .features-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .feature{
+    background:#fff;border:1px solid var(--hairline);
+    border-radius:12px;padding:32px;
+    box-shadow:var(--shadow-1);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .feature:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+  .feature-icon{
+    width:40px;height:40px;border-radius:10px;
+    background:rgba(83,58,253,0.08);color:var(--indigo);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:20px;
+  }
+  .feature h3{
+    font-size:20px;font-weight:400;letter-spacing:-0.3px;
+    color:var(--ink);margin-bottom:8px;
+  }
+  .feature p{color:var(--ink-mute);font-size:15px;line-height:1.55}
+  @media(max-width:768px){
+    .features-grid{grid-template-columns:1fr;gap:16px}
+    .feature{padding:24px}
+  }
+
+  /* ============ USE CASES ============ */
+  .usecases{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto;
+  }
+  .usecase{
+    background:#fff;border-radius:12px;padding:28px;
+    display:flex;gap:20px;align-items:flex-start;
+    border:1px solid rgba(0,0,0,0.04);
+    box-shadow:var(--shadow-1);
+  }
+  .usecase-icon{
+    flex-shrink:0;width:48px;height:48px;border-radius:12px;
+    background:rgba(83,58,253,0.08);color:var(--indigo);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .usecase h3{
+    font-size:18px;font-weight:500;color:var(--ink);
+    margin-bottom:6px;letter-spacing:-0.2px;
+  }
+  .usecase p{color:var(--ink-mute);font-size:14px;line-height:1.55}
+  @media(max-width:768px){.usecases{grid-template-columns:1fr}}
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .testimonial{
+    background:#fff;border:1px solid var(--hairline);
+    border-radius:12px;padding:36px 32px;
+    box-shadow:var(--shadow-1);
+    display:flex;flex-direction:column;
+  }
+  .testimonial-num{
+    font-size:56px;font-weight:300;color:var(--indigo);
+    letter-spacing:-1.4px;line-height:1;margin-bottom:24px;
+    font-feature-settings:"ss01","tnum";
+  }
+  .testimonial-quote{
+    font-size:17px;font-weight:300;color:var(--ink-2);
+    line-height:1.55;margin-bottom:24px;flex-grow:1;
+  }
+  .testimonial-author{
+    font-size:14px;color:var(--ink-mute);font-weight:400;
+    padding-top:20px;border-top:1px solid var(--hairline);
+  }
+  .testimonial-author strong{
+    color:var(--ink);font-weight:500;display:block;margin-bottom:2px;
+  }
+  @media(max-width:768px){
+    .testimonials{grid-template-columns:1fr;gap:16px}
+    .testimonial{padding:28px 24px}
+    .testimonial-num{font-size:44px}
+  }
+
+  /* ============ PRICING ============ */
+  .pricing-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    max-width:1100px;margin:0 auto;
+  }
+  .price-card{
+    background:#fff;border:1px solid var(--hairline);
+    border-radius:14px;padding:36px 32px;
+    display:flex;flex-direction:column;
+    box-shadow:var(--shadow-1);
+    position:relative;
+  }
+  .price-card.featured{
+    background:var(--navy-900);color:#fff;border:none;
+    box-shadow:var(--shadow-2);
+    transform:scale(1.02);
+  }
+  .price-badge{
+    position:absolute;top:-12px;right:32px;
+    background:var(--ruby);color:#fff;
+    padding:6px 14px;border-radius:9999px;
+    font-size:12px;font-weight:500;letter-spacing:.02em;
+  }
+  .price-name{
+    font-size:14px;font-weight:500;color:var(--ink-mute);
+    text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;
+  }
+  .price-card.featured .price-name{color:rgba(255,255,255,0.7)}
+  .price-tagline{
+    font-size:15px;color:var(--ink-mute);font-weight:300;
+    margin-bottom:20px;
+  }
+  .price-card.featured .price-tagline{color:rgba(255,255,255,0.75)}
+  .price-amount{
+    font-size:32px;font-weight:300;color:var(--ink);
+    letter-spacing:-0.6px;margin-bottom:24px;
+    font-feature-settings:"ss01","tnum";
+  }
+  .price-card.featured .price-amount{color:#fff}
+  .price-features{list-style:none;margin-bottom:32px;flex-grow:1}
+  .price-features li{
+    font-size:15px;color:var(--ink-2);font-weight:300;
+    padding:8px 0;padding-right:24px;position:relative;line-height:1.5;
+  }
+  .price-card.featured .price-features li{color:rgba(255,255,255,0.85)}
+  .price-features li::before{
+    content:'';position:absolute;right:0;top:14px;
+    width:14px;height:8px;
+    border-right:2px solid var(--indigo);
+    border-bottom:2px solid var(--indigo);
+    transform:rotate(45deg);
+  }
+  .price-card.featured .price-features li::before{
+    border-color:var(--indigo-soft);
+  }
+  @media(max-width:768px){
+    .pricing-grid{grid-template-columns:1fr;gap:16px}
+    .price-card.featured{transform:none}
+    .price-badge{right:24px}
+  }
+
+  /* ============ COMPARISON TABLE ============ */
+  .comparison-wrap{
+    background:#fff;border:1px solid var(--hairline);
+    border-radius:14px;padding:8px;
+    box-shadow:var(--shadow-2);
+    max-width:880px;margin:0 auto;overflow:hidden;
+  }
+  .comparison-table{
+    width:100%;border-collapse:collapse;
+    font-feature-settings:"ss01","tnum";
+  }
+  .comparison-table th{
+    text-align:right;padding:18px 20px;
+    font-size:14px;font-weight:500;color:var(--ink-mute);
+    text-transform:uppercase;letter-spacing:.06em;
+    border-bottom:1px solid var(--hairline);
+  }
+  .comparison-table th.col-tochat{
+    color:var(--accent-orange);font-weight:700;
+  }
+  .comparison-table td{
+    padding:16px 20px;font-size:16px;color:var(--ink-2);font-weight:400;
+    border-bottom:1px solid var(--hairline);
+  }
+  .comparison-table td.col-tochat{
+    background:rgba(255,105,0,0.05);color:var(--ink);font-weight:500;
+  }
+  .comparison-table tr:last-child td{border-bottom:none}
+  @media(max-width:768px){
+    .comparison-table th,.comparison-table td{padding:12px 10px;font-size:14px}
+  }
+
+  /* ============ FAQ ============ */
+  .faq{max-width:760px;margin:0 auto}
+  .faq-item{
+    border-bottom:1px solid var(--hairline);
+  }
+  .faq-q{
+    width:100%;text-align:right;padding:24px 0;
+    font-size:18px;font-weight:400;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-family:inherit;background:none;border:none;cursor:pointer;
+    letter-spacing:-0.2px;
+  }
+  .faq-q:hover{color:var(--indigo)}
+  .faq-icon{
+    flex-shrink:0;width:24px;height:24px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink-mute);transition:transform .25s;
+    font-size:18px;font-weight:300;
+  }
+  .faq-item.open .faq-icon{transform:rotate(45deg);color:var(--indigo)}
+  .faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .3s ease,padding .3s ease;
+    color:var(--ink-mute);font-size:16px;line-height:1.65;font-weight:300;
+  }
+  .faq-item.open .faq-a{max-height:300px;padding:0 0 24px}
+
+  /* ============ FINAL CTA ============ */
+  .final-cta{
+    position:relative;overflow:hidden;text-align:center;padding:120px 0;
+  }
+  .final-cta .gradient-mesh{
+    top:-50px;height:120%;opacity:0.5;
+  }
+  .final-cta-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+  .final-cta h2{margin-bottom:20px}
+  .final-cta .lead{margin-bottom:36px}
+  .final-cta-buttons{
+    display:flex;gap:12px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;
+  }
+  .trust-tags{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+  }
+  .trust-tag{
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(8px);
+    border:1px solid var(--hairline);
+    padding:6px 14px;border-radius:9999px;
+    font-size:13px;font-weight:400;color:var(--ink-2);
+  }
+  @media(max-width:768px){
+    .final-cta{padding:80px 0}
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding:64px 0 32px;background:#fff;border-top:1px solid var(--hairline);
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:32px;
+    margin-bottom:48px;
+  }
+  .footer-brand{font-size:22px;font-weight:400;color:var(--ink);margin-bottom:12px}
+  .footer-brand-sub{font-size:13px;color:var(--ink-mute);font-weight:300;line-height:1.6}
+  .footer-col h4{
+    font-size:13px;font-weight:500;color:var(--ink);
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px;
+  }
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer-col a{
+    font-size:14px;color:var(--ink-mute);font-weight:300;
+    transition:color .15s;
+  }
+  .footer-col a:hover{color:var(--indigo)}
+  .footer-bottom{
+    padding-top:24px;border-top:1px solid var(--hairline);
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:13px;color:var(--ink-mute);font-weight:300;
+  }
+  .footer-social{display:flex;gap:12px}
+  .footer-social a{
+    width:32px;height:32px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink-mute);transition:all .15s;
+    border:1px solid var(--hairline);
+  }
+  .footer-social a:hover{color:var(--indigo);border-color:var(--indigo)}
+  @media(max-width:768px){
+    .footer-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+    .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  @media(max-width:480px){
+    .container{padding:0 16px}
+    .display-xxl{font-size:32px;letter-spacing:-0.6px}
+    .display-lg{font-size:26px}
+    .nav-inner{padding:12px 16px;gap:12px}
+    .hero-ctas{flex-direction:column;align-items:stretch;padding:0 24px}
+    .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">ToChat</a>
+    <div class="nav-cta">
+      <a href="tel:03-1234567" class="nav-login">📞 03-1234567</a>
+      <a href="#" class="btn btn-orange">קבל דמו חינם <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="gradient-mesh"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">תותח שיחות בענן · API פתוח · ישראלי</span>
+      <h1 class="display-xxl">תותח שיחות שמדבר עם כל מערכת שיש לך</h1>
+      <p class="lead">ToChat היא תשתית החיוג שנציגים אמיתיים בוחרים. דפדפן, API פתוח, תאימות מלאה לרגולציה הישראלית. מ-12 דקות הקמה לראשון נציג בשיחה.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-orange">קבל דמו חינם <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn btn-secondary">צור קשר עם מכירות</a>
+      </div>
+
+      <div class="trust-stats">
+        <div class="trust-stat">
+          <div class="trust-stat-num tnum">3.2x</div>
+          <div class="trust-stat-label">שיחות לנציג</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-stat-num tnum">12 דקות</div>
+          <div class="trust-stat-label">Time to first call</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-stat-num tnum">₪0</div>
+          <div class="trust-stat-label">התקנה / IT</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-stat-num tnum">99.9%</div>
+          <div class="trust-stat-label">uptime SLA</div>
+        </div>
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-row-label">אמון של 1,400+ מוקדים בישראל</div>
+        <div class="trust-logos">
+          <span class="trust-logo">Direct Sales IL</span>
+          <span class="trust-logo">סוכנות כהן</span>
+          <span class="trust-logo">עמותת לב אחד</span>
+          <span class="trust-logo">מוקד אופק</span>
+          <span class="trust-logo">גיוסי כלל</span>
+          <span class="trust-logo">רוזנברג ביטוח</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD MOCKUP ============ -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">DASHBOARD</span>
+      <h2 class="display-lg">תותח שיחות עם דשבורד לייב - לא דוחות שבועיים</h2>
+      <p class="lead">Supervisor יודע בכל רגע כמה נציגים בשיחה, איזה ליד חם, ואיפה הצוואר בקבוק.</p>
+    </div>
+
+    <div class="dashboard reveal">
+      <div class="dash-kpis">
+        <div class="kpi">
+          <div class="kpi-label">שיחות היום</div>
+          <div class="kpi-value tnum"><strong>847</strong></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">סגירות</div>
+          <div class="kpi-value tnum"><strong>34</strong></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">ASR</div>
+          <div class="kpi-value tnum"><strong>2:14</strong></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">נציגים פעילים</div>
+          <div class="kpi-value tnum"><strong>12/15</strong></div>
+        </div>
+      </div>
+
+      <div class="dash-table-title">
+        <span class="live-dot"></span>
+        שיחות חיות עכשיו
+      </div>
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>נציג</th>
+            <th>ליד</th>
+            <th>משך</th>
+            <th>סטטוס</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>שלמה כהן</td>
+            <td>יואב לוי</td>
+            <td class="tnum">03:42</td>
+            <td><span class="badge-live">LIVE</span></td>
+          </tr>
+          <tr>
+            <td>מיכל ברקת</td>
+            <td>רחל פלד</td>
+            <td class="tnum">02:15</td>
+            <td><span class="badge-live">LIVE</span></td>
+          </tr>
+          <tr>
+            <td>אורי נחמן</td>
+            <td>דנה אביבי</td>
+            <td class="tnum">05:08</td>
+            <td><span class="badge-live">LIVE</span></td>
+          </tr>
+          <tr>
+            <td>תמר רוזן</td>
+            <td>בני שטרן</td>
+            <td class="tnum">01:31</td>
+            <td><span class="badge-hot">חם</span></td>
+          </tr>
+          <tr>
+            <td>יוסי ברק</td>
+            <td>גלית מזרחי</td>
+            <td class="tnum">04:22</td>
+            <td><span class="badge-live">LIVE</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">פלטפורמת תותח שיחות</span>
+      <h2 class="display-lg">תותח שיחות ToChat מול המערכת הממוצעת בשוק</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>חיוג בקליק אחד</h3>
+        <p>אלגוריתם תעדוף לידים מסדר את התור. הנציג רק מדבר.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+        </div>
+        <h3>Whisper & Listen</h3>
+        <p>תאמן נציג בזמן אמת בלי שהלקוח שומע אותך. בית-ספר חי.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+        </div>
+        <h3>API פתוח + Make + Zapier</h3>
+        <p>חבר ל-Pipedrive, HubSpot, Salesforce, Monday. דקה.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>דפדפן בלבד</h3>
+        <p>אין PBX. אין IP קבוע. אין IT. נציג חדש מחייג ב-12 דקות.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>תאימות תיקון 40</h3>
+        <p>רישום הסכמות, blacklist, הקלטות, דוח רגולטורי בקליק.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3>TrueCaller Integration</h3>
+        <p>בלי לקבל ספאם, בלי להיות ספאם. סינון דו-כיווני.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section id="usecases" class="section-cream">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">תותח שיחות לכל מוקד</span>
+      <h2 class="display-lg">תותח שיחות בנוי למוקדי מכירה ישראליים</h2>
+    </div>
+
+    <div class="usecases">
+      <div class="usecase reveal">
+        <div class="usecase-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>תותח שיחות לסוכנויות ביטוח</h3>
+          <p>follow-up אוטומטי על quotes שלא נסגרו, הקלטות לתיק לקוח</p>
+        </div>
+      </div>
+
+      <div class="usecase reveal">
+        <div class="usecase-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <h3>תותח שיחות לעמותות גיוס</h3>
+          <p>מתנדבים מהבית, רכז עם whisper, דוחות יומיים</p>
+        </div>
+      </div>
+
+      <div class="usecase reveal">
+        <div class="usecase-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h3>תותח שיחות לחברות גביה</h3>
+          <p>תיעוד מלא, התאמה לרגולציית בנק ישראל, blacklist</p>
+        </div>
+      </div>
+
+      <div class="usecase reveal">
+        <div class="usecase-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div>
+          <h3>תותח שיחות למוקדי B2C דיגיטליים</h3>
+          <p>lead routing מ-Facebook/Google ישר לחיוג</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="display-lg">ROI אמיתי מתותח שיחות - ספרים פתוחים</h2>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial reveal">
+        <div class="testimonial-num tnum">2.4x</div>
+        <p class="testimonial-quote">"החלפנו מערכות אחרות בשוק בגלל ה-API של תותח שיחות ToChat. הכל שלנו מסתנכרן עם Pipedrive בלי middleware. בתוך חודשיים הכפלנו לידים מטופלים ביום."</p>
+        <div class="testimonial-author">
+          <strong>רותם בן-עמי</strong>
+          מנכ״ל Direct Sales IL, תל אביב
+        </div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="testimonial-num tnum">₪43,200</div>
+        <p class="testimonial-quote">"חיסכון חודשי על תפעול IT אחרי המעבר ל-ToChat. אין יותר PBX לתחזק, אין IP קבוע, אין טכנאי שמגיע בכל באג."</p>
+        <div class="testimonial-author">
+          <strong>אבי כהן</strong>
+          סוכנות ביטוח כהן ושות׳, חיפה
+        </div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="testimonial-num tnum">+131%</div>
+        <p class="testimonial-quote">"גיוסי 2025 לעומת 2024. 25 מתנדבים מהבית עם רכז שעושה whisper בזמן אמת. הצלחה גם בלי משרד."</p>
+        <div class="testimonial-author">
+          <strong>שירה גוטמן</strong>
+          עמותת לב אחד, ירושלים
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section id="comparison" class="section-cream">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">השוואה</span>
+      <h2 class="display-lg">תותח שיחות ToChat מול המערכת הממוצעת בשוק</h2>
+      <p class="lead">למה מוקדי מכירות בישראל עוברים לתותח שיחות ToChat.</p>
+    </div>
+
+    <div class="comparison-wrap reveal">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>יכולת</th>
+            <th class="col-tochat">ToChat</th>
+            <th>המערכת הממוצעת בשוק</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>התקנה</td>
+            <td class="col-tochat tnum">12 דקות</td>
+            <td>2-4 שבועות</td>
+          </tr>
+          <tr>
+            <td>דורש IT</td>
+            <td class="col-tochat">❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Whisper בזמן אמת</td>
+            <td class="col-tochat">✅</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>תאימות תיקון 40</td>
+            <td class="col-tochat">מובנית</td>
+            <td>בתוספת תשלום</td>
+          </tr>
+          <tr>
+            <td>חוזה מינימום</td>
+            <td class="col-tochat">חודשי</td>
+            <td>שנתי</td>
+          </tr>
+          <tr>
+            <td>API פתוח</td>
+            <td class="col-tochat">✅ Make/Zapier</td>
+            <td>חלקי</td>
+          </tr>
+          <tr>
+            <td>תמיכה בעברית</td>
+            <td class="col-tochat">מלאה</td>
+            <td>חלקית</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align:center;margin-top:40px">
+      <a href="#" class="btn btn-orange">קבל דמו חינם <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="display-lg">שאלות נפוצות על תותח שיחות</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item reveal">
+        <button class="faq-q">כמה זמן הקמה?<span class="faq-icon">+</span></button>
+        <div class="faq-a">12 דקות מהרישום לשיחה ראשונה. אין PBX, אין IP, אין התקנה. רק דפדפן.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">תיקון 40 חוק הספאם - איך זה עובד?<span class="faq-icon">+</span></button>
+        <div class="faq-a">ToChat שומר רישום הסכמות אוטומטי, מסנכרן blacklist עם משרד המשפטים, ומפיק דוח לרגולטור בקליק. תאימות מובנית, לא תוספת.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">מה עם המעבר ממערכות אחרות בשוק?<span class="faq-icon">+</span></button>
+        <div class="faq-a">ייבוא אנשי קשר ב-CSV או דרך ה-API. צוות onboarding שלנו עושה את המיגרציה של תותח השיחות - חינם.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">CRM integration?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Pipedrive, HubSpot, Monday, Salesforce native. כל השאר דרך Make או Zapier ב-3 קליקים.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">שרתים בישראל?<span class="faq-icon">+</span></button>
+        <div class="faq-a">כן. כל הדאטה אצלכם. תאימות GDPR + חוק הגנת הפרטיות הישראלי.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="gradient-mesh"></div>
+  <div class="container">
+    <div class="final-cta-inner reveal">
+      <h2 class="display-xxl">תותח שיחות שמתחיל למכור היום</h2>
+      <p class="lead">דמו חינם של תותח שיחות. ללא התחייבות. 12 דקות מהרישום והנציג שלך בשיחה.</p>
+      <div class="final-cta-buttons">
+        <a href="#" class="btn btn-orange">קבל דמו חינם <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn btn-secondary">תיאום דמו 15 דק׳</a>
+      </div>
+      <div class="trust-tags">
+        <span class="trust-tag">🔒 SOC 2</span>
+        <span class="trust-tag">🇮🇱 שרתים בישראל</span>
+        <span class="trust-tag">📋 תיקון 40</span>
+        <span class="trust-tag">⚡ הקמה ב-12 דק׳</span>
+        <span class="trust-tag">🔌 API פתוח</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ToChat</div>
+        <p class="footer-brand-sub">תותח השיחות שמדבר עם כל מערכת שיש לך. תשתית חיוג ענן למוקדי מכירות ישראליים.</p>
+      </div>
+      <div class="footer-col">
+        <h4>מוצר</h4>
+        <ul>
+          <li><a href="#">תכונות</a></li>
+          <li><a href="#">אינטגרציות</a></li>
+          <li><a href="#">Whisper & Listen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>פתרונות</h4>
+        <ul>
+          <li><a href="#">סוכנויות ביטוח</a></li>
+          <li><a href="#">עמותות וגיוס כספים</a></li>
+          <li><a href="#">חברות גביה</a></li>
+          <li><a href="#">מכירה דיגיטלית</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>מפתחים</h4>
+        <ul>
+          <li><a href="#">תיעוד API</a></li>
+          <li><a href="#">Webhooks</a></li>
+          <li><a href="#">Make / Zapier</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>חברה</h4>
+        <ul>
+          <li><a href="#">אודות</a></li>
+          <li><a href="#">לקוחות</a></li>
+          <li><a href="#">קריירה</a></li>
+          <li><a href="#">צור קשר</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>משפטי</h4>
+        <ul>
+          <li><a href="#">תנאי שימוש</a></li>
+          <li><a href="#">פרטיות</a></li>
+          <li><a href="#">תיקון 40</a></li>
+          <li><a href="#">DPA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ToChat. כל הזכויות שמורות.</div>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
