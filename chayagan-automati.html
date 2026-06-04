@@ -441,6 +441,12 @@ body.enable-toolbar-open #enable-toolbar-content{
 .step3 p{font-size:16px;color:#5b6478;line-height:1.55}
 @media (max-width:980px){.steps3{grid-template-columns:1fr;gap:16px}}
 
+/* ===== SECTION DIVIDER ===== */
+.section-divider{line-height:0;background:#fff;margin:0;padding:0}
+.section-divider svg{display:block;width:100%;height:56px}
+@media (max-width:980px){.section-divider svg{height:36px}}
+@media (max-width:560px){.section-divider svg{height:24px}}
+
 /* ===== FEATURES 6 ===== */
 .features{padding:100px 32px;background:#F8F9FD}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -886,6 +892,13 @@ body.enable-toolbar-open #enable-toolbar-content{
     </div>
   </div>
 </section>
+
+<!-- Section divider: How it works → Features -->
+<div class="section-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1440,56 L1440,56 L0,56 Z" fill="#F8F9FD"/>
+  </svg>
+</div>
 
 <!-- ============== FEATURES 6 ============== -->
 <section class="features" id="features">
