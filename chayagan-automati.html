@@ -341,6 +341,12 @@ body.enable-toolbar-open #enable-toolbar-content{
 }
 .hero-success{max-width:640px;margin:0 auto 12px;background:#E7F6EF;border:1px solid #15803D;color:#136a33;border-radius:10px;padding:16px 18px;font-weight:600;font-size:15px;text-align:center}
 .hero-value-line{font-size:14px;color:#414B60;font-weight:600;line-height:1.5;margin:0 auto 18px;max-width:640px}
+.hero-values{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px auto 0;max-width:780px}
+.hero-val{flex:1 1 220px;background:#fff;border:1.5px solid #E4E9F3;border-radius:14px;padding:18px 20px;text-align:center;transition:transform .2s,box-shadow .2s}
+.hero-val:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(65,75,96,0.08)}
+.hero-val-title{display:block;font-size:16px;font-weight:800;color:#121927;margin-bottom:4px}
+.hero-val-desc{display:block;font-size:13px;font-weight:500;color:#5b6478;line-height:1.4}
+@media (max-width:560px){.hero-values{flex-direction:column;gap:10px}.hero-val{padding:14px 16px}}
 .hero-consent{flex-basis:100%;font-size:12px;color:#5b6478;margin:2px auto 6px;max-width:640px;text-align:center;line-height:1.5}
 .hero-consent a{color:#414B60;text-decoration:underline;text-underline-offset:2px}
 .hero-micro{font-size:14px;color:#5b6478;font-weight:600}
@@ -812,7 +818,11 @@ body.enable-toolbar-open #enable-toolbar-content{
       <a href="#demo" class="btn btn-orange">קבלו דמו חינם</a>
       <a href="#how" class="btn btn-ghost">איך זה עובד? ↓</a>
     </div>
-    <p class="hero-value-line">הקמה ב-12 דקות · ללא התחייבות · תמיכה ישראלית בטלפון, צ׳אט ווואטסאפ</p>
+    <div class="hero-values">
+      <div class="hero-val"><span class="hero-val-title">ראש נוסף, בלי נוסף</span><span class="hero-val-desc">הנציגים שלכם מספיקים עד פי 3 שיחות ביום</span></div>
+      <div class="hero-val"><span class="hero-val-title">הקמה ב-12 דקות</span><span class="hero-val-desc">3 דקות ואתם באוויר</span></div>
+      <div class="hero-val"><span class="hero-val-title">תמיכה ישראלית בטלפון, צ׳אט ווואטסאפ</span><span class="hero-val-desc">לייב, צעד אחר צעד, לכל שאלה</span></div>
+    </div>
   </div>
 </section>
 
@@ -828,6 +838,9 @@ body.enable-toolbar-open #enable-toolbar-content{
     </div>
   </div>
   <p class="video-cap">ממשק החייגן האוטומטי של ToChat · לחצו לצפייה</p>
+  <div class="mockup-result" style="text-align:center;margin-top:24px;padding:18px 20px;background:#FFF1E5;border-radius:12px;max-width:780px;margin-left:auto;margin-right:auto">
+    <p style="font-size:18px;font-weight:800;color:#121927;margin:0">כתוצאה מזה, הנציגים מקבלים את השיחות הרלוונטיות ביותר</p>
+  </div>
 </div>
 
 <!-- ============== TRUST BAR ============== -->
@@ -849,9 +862,9 @@ body.enable-toolbar-open #enable-toolbar-content{
 <!-- ============== STATS ============== -->
 <section class="stats">
   <div class="stats-inner">
-    <div class="reveal"><div class="stat-num">1,400+</div><div class="stat-label">מוקדי מכירה מחייגים עם ToChat</div></div>
+    <div class="reveal"><div class="stat-num">1,400+</div><div class="stat-label">מוקדי מכירה כבר מחייגים עם ToChat</div></div>
+    <div class="reveal"><div class="stat-num">אלפי</div><div class="stat-label">נציגים כבר מחייגים עם ToChat</div></div>
     <div class="reveal"><div class="stat-num">עד פי 3</div><div class="stat-label">שיחות לנציג ביום</div></div>
-    <div class="reveal"><div class="stat-num">12 דקות</div><div class="stat-label">מהרשמה לשיחה הראשונה</div></div>
     <div class="reveal"><div class="stat-num"><bdi>99.9%</bdi></div><div class="stat-label">זמינות מערכת (uptime)</div></div>
   </div>
   <p class="stats-note">* נתון "עד פי 3 שיחות לנציג" מבוסס על נתוני שימוש מצרפיים של מוקדים ב-ToChat, בהשוואה לחיוג ידני; התוצאה בפועל משתנה לפי המוקד, רשימת הלידים ואופי הפעילות.</p>
