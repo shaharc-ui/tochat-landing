@@ -1077,7 +1077,7 @@ body.enable-toolbar-open #enable-toolbar-content{
 </section>
 
 <!-- ============== LEAD CAPTURE FORM ============== -->
-<section class="lead-form-section" id="demo">
+<section class="lead-form-section" id="demo-section">
   <div class="hero-dots">
     <span class="dot d1"></span><span class="dot d3"></span><span class="dot d5"></span>
     <span class="dot d6"></span><span class="dot d2"></span><span class="dot d7"></span>
@@ -1094,6 +1094,7 @@ body.enable-toolbar-open #enable-toolbar-content{
     </div>
 
     <form class="lead-form" id="leadForm" novalidate>
+      <div id="demo"></div>
       <div class="lead-form-row">
         <div class="lead-field">
           <label for="fullName">שם מלא <span class="req" aria-hidden="true">*</span></label>
@@ -1314,7 +1315,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 // Sticky mobile CTA: persistent in the mid-page thumb zone, but hidden while the
 // hero (which has its own form) or the bottom form is in view, and never overlapping content.
 const stickyCta = document.getElementById('stickyMobileCta');
-const formEl = document.getElementById('demo');
+const formEl = document.getElementById('demo-section');
 const heroTop = document.getElementById('top');
 if(stickyCta && formEl){
   stickyCta.style.opacity = '1';
