@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A12">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex">
+<title>דשבורד עסקי | ToChat — סיכום מאוחד</title>
+<meta name="description" content="דשבורד עסקי של ToChat — סיכום מאוחד של ביצועי הפרסום והחיוג: הוצאות, הכנסות, עלות לליד, MER, שיחות והמרות.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08080F;
+  --bg-2:#0B0B16;
+  --panel:#0F0F1A;
+  --card:#14141F;
+  --card-2:#10101A;
+  --card-border:rgba(255,255,255,.07);
+  --card-border-2:rgba(255,255,255,.11);
+  --violet:#7C5CFF;
+  --violet-2:#9F86FF;
+  --violet-bar:#A98BFF;
+  --violet-soft:rgba(124,92,255,.16);
+  --orange:#F93E0C;
+  --orange-2:#FE8713;
+  --orange-soft:rgba(249,62,12,.14);
+  --text:#F5F5FA;
+  --text-2:#A4A4BA;
+  --text-3:#8B8BA3;
+  --green:#34D399;
+  --green-soft:rgba(52,211,153,.14);
+  --red:#FF5C72;
+  --red-soft:rgba(255,92,114,.14);
+  --grid:rgba(255,255,255,.055);
+  --r:18px;
+  --r-sm:13px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Heebo',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  direction:rtl;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+  overflow-x:hidden;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+}
+/* ambient depth */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 88% -8%, rgba(124,92,255,.20), transparent 60%),
+    radial-gradient(760px 480px at 4% 8%, rgba(249,62,12,.10), transparent 58%),
+    radial-gradient(1100px 700px at 50% 120%, rgba(124,92,255,.08), transparent 60%);
+}
+.app{position:relative;z-index:1;max-width:1340px;margin:0 auto;padding:22px clamp(14px,3vw,34px) 64px}
+::selection{background:var(--violet);color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:8px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.2)}
+
+/* ---------- Top bar ---------- */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;flex:0 0 auto;
+  background:linear-gradient(150deg,#FF7A33,#F93E0C 62%);
+  display:grid;place-items:center;
+  box-shadow:0 8px 22px -6px rgba(249,62,12,.55),inset 0 1px 0 rgba(255,255,255,.35);
+}
+.brand-mark svg{width:23px;height:23px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.brand-name{font-weight:800;font-size:16px;letter-spacing:-.01em;direction:ltr;white-space:nowrap;text-align:start}
+.brand-name b{color:var(--orange-2);font-weight:800}
+.brand-sub{font-size:12px;color:var(--text-3);font-weight:500}
+.top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;height:42px;padding:0 15px;
+  background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  color:var(--text);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+  transition:border-color .18s,background .18s,transform .18s;
+}
+.pill:hover{border-color:var(--card-border-2);background:#191925}
+.pill svg{width:16px;height:16px;opacity:.85}
+.pill .chev{width:13px;height:13px;opacity:.6}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;
+  background:linear-gradient(150deg,#FF7A33,#F93E0C 70%);color:#fff;border:none;border-radius:12px;
+  font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;
+  box-shadow:0 10px 24px -8px rgba(249,62,12,.6),inset 0 1px 0 rgba(255,255,255,.3);
+  transition:transform .18s,box-shadow .18s,filter .18s;
+}
+.btn-primary:hover{transform:translateY(-1px);filter:brightness(1.05);box-shadow:0 14px 30px -8px rgba(249,62,12,.68)}
+.btn-primary svg{width:16px;height:16px}
+.avatar{
+  width:42px;height:42px;border-radius:12px;flex:0 0 auto;
+  background:linear-gradient(150deg,#6D5CFF,#3D2EAE);
+  display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff;
+  border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* ---------- Summary header ---------- */
+.summary-head{
+  display:flex;align-items:center;gap:14px;margin:2px 2px 16px;flex-wrap:wrap;
+}
+.summary-title{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.summary-title .spark-ic{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:var(--violet-soft);border:1px solid rgba(124,92,255,.3);
+}
+.summary-title .spark-ic svg{width:17px;height:17px}
+.platforms{display:flex;align-items:center;gap:-8px}
+.platforms .pf{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  background:#15151F;border:1.5px solid #08080F;margin-inline-start:-8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+.platforms .pf:first-child{margin-inline-start:0}
+.platforms .pf svg{width:17px;height:17px}
+.platforms .pf.more{font-size:11px;font-weight:700;color:var(--text-2);background:#1C1C28}
+.live{
+  display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:999px;
+  background:var(--green-soft);border:1px solid rgba(52,211,153,.28);
+  font-size:12px;font-weight:700;color:var(--green);
+}
+.live .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 1.8s infinite}
+.spacer{flex:1 1 auto}
+.kebab{width:36px;height:36px;border-radius:10px;background:var(--card);border:1px solid var(--card-border);color:var(--text-2);cursor:pointer;display:grid;place-items:center}
+.kebab:hover{border-color:var(--card-border-2);color:var(--text)}
+.kebab svg{width:18px;height:18px}
+
+/* ---------- KPI grid ---------- */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}
+.kpi{
+  position:relative;background:linear-gradient(168deg,var(--card),var(--card-2));
+  border:1px solid var(--card-border);border-radius:var(--r);
+  padding:16px 17px 15px;min-height:128px;overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.kpi::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 38%);}
+.kpi:hover{transform:translateY(-3px);border-color:var(--card-border-2);box-shadow:0 18px 40px -18px rgba(0,0,0,.8)}
+.kpi-top{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.kpi-ic{
+  width:30px;height:30px;border-radius:9px;flex:0 0 auto;display:grid;place-items:center;
+  background:color-mix(in srgb,var(--tint) 18%,transparent);
+  border:1px solid color-mix(in srgb,var(--tint) 34%,transparent);
+  color:var(--tint);
+}
+.kpi-ic svg{width:16px;height:16px}
+.kpi-label{font-size:12.5px;font-weight:600;color:var(--text-2);letter-spacing:-.005em}
+.kpi-mid{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.kpi-value{font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--text);white-space:nowrap}
+.kpi-sub{font-size:11px;color:var(--text-3);font-weight:500;margin-top:5px;height:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px}
+.kpi-spark{width:78px;height:40px;flex:0 0 auto}
+.kpi-foot{display:flex;align-items:center;gap:7px;margin-top:10px}
+.delta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;padding:3px 8px 3px 7px;border-radius:999px}
+.delta svg{width:11px;height:11px}
+.delta.pos{color:var(--green);background:var(--green-soft)}
+.delta.neg{color:var(--red);background:var(--red-soft)}
+.delta.neu{color:var(--violet-2);background:rgba(124,92,255,.14)}
+.kpi-foot{overflow:hidden}
+.kpi-foot .vs{font-size:11px;color:var(--text-3);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- Charts ---------- */
+.charts{display:grid;grid-template-columns:1.32fr 1fr;gap:14px}
+.card{
+  position:relative;background:linear-gradient(168deg,var(--card),var(--card-2));
+  border:1px solid var(--card-border);border-radius:var(--r);padding:20px 20px 14px;overflow:hidden;
+}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 30%);}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;position:relative;z-index:2}
+.card-title{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700}
+.card-title .ic{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--violet-soft);border:1px solid rgba(124,92,255,.3);color:var(--violet-2)}
+.card-title .ic svg{width:15px;height:15px}
+.card-kpi{display:flex;align-items:baseline;gap:9px}
+.card-kpi b{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.card-kpi .delta{transform:translateY(-2px)}
+.chart-wrap{position:relative;width:100%;direction:ltr}
+.chart-wrap svg{display:block;width:100%;height:auto;overflow:visible}
+.legend{display:flex;align-items:center;gap:16px;margin-top:2px;direction:rtl}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--text-2);font-weight:500}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* chart tooltip */
+.tt{
+  position:absolute;pointer-events:none;opacity:0;transform:transl(-50%,-8px);
+  background:#1B1B28;border:1px solid var(--card-border-2);border-radius:10px;
+  padding:7px 11px;font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;
+  box-shadow:0 12px 30px -8px rgba(0,0,0,.8);transition:opacity .12s,transform .12s;z-index:6;direction:rtl;
+  transform:translate(-50%,0);
+}
+.tt b{color:var(--violet-2)}
+.tt.show{transform:translate(-50%,-3px)}
+.tt.show{opacity:1}
+
+.dot-hit{cursor:pointer}
+.bar-rect{transition:filter .15s}
+.bar-g:hover .bar-rect{filter:brightness(1.18)}
+
+/* entrance */
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}70%{box-shadow:0 0 0 7px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;animation:rise .5s cubic-bezier(.2,.7,.2,1) forwards}
+
+.sum-txt{display:flex;flex-direction:column;line-height:1.18}
+.sum-txt h1{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0}
+.sum-sub{font-size:12px;color:var(--text-2);font-weight:500}
+.src{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 13px;border-radius:999px;background:var(--violet-soft);border:1px solid rgba(124,92,255,.3);font-size:12px;font-weight:700;color:var(--violet-2)}
+.src .dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 1.8s infinite}
+.attrib{max-width:900px;margin:20px auto 0;font-size:12px;line-height:1.8;color:var(--text-3);text-align:center}
+:focus-visible{outline:2px solid var(--violet-2);outline-offset:2px;border-radius:8px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1080px){
+  .charts{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .kpi-value{font-size:23px}
+  .brand-sub{display:none}
+}
+@media(max-width:480px){
+  .app{padding:16px 12px 48px}
+  .kpi-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .kpi{min-height:118px;padding:13px 13px 12px}
+  .kpi-value{font-size:20px}
+  .kpi-spark{width:60px;height:34px}
+  .kpi-foot .vs{display:none}
+  .summary-title{font-size:17px}
+  .top-actions .pill span.lbl{display:none}
+  .btn-primary span.lbl{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- TOP BAR -->
+  <header class="topbar reveal" style="animation-delay:.02s">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3h3.2l1.4 4.2-2 1.4a12 12 0 0 0 5.3 5.3l1.4-2 4.2 1.4v3.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z" fill="#fff"/></svg>
+      </div>
+      <div class="brand-txt">
+        <span class="brand-name">To<b>Chat</b></span>
+        <span class="brand-sub">דשבורד עסקי</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="pill" type="button" aria-label="טווח תאריכים">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+        <span id="date-label">7 ימים אחרונים</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <button class="btn-primary" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        <span class="lbl">דוח חדש</span>
+      </button>
+      <div class="avatar" aria-hidden="true">ת</div>
+    </div>
+  </header>
+
+  <!-- SUMMARY HEADER -->
+  <div class="summary-head reveal" style="animation-delay:.06s">
+    <div class="summary-title">
+      <span class="spark-ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.6 5.4L19 9l-5.4 1.6L12 16l-1.6-5.4L5 9l5.4-1.6L12 2z" fill="#9F86FF"/><circle cx="19" cy="18" r="2" fill="#9F86FF"/><circle cx="5.5" cy="17" r="1.4" fill="#9F86FF" opacity=".7"/></svg>
+      </span>
+      <span class="sum-txt">
+        <h1 id="summary-title">סיכום ביצועים · Meta Ads</h1>
+        <span class="sum-sub" id="summary-sub"></span>
+      </span>
+    </div>
+    <div class="platforms" id="platforms" aria-label="מקורות מחוברים"></div>
+    <span class="src" id="src-badge"><span class="dot-live"></span></span>
+    <span class="spacer"></span>
+    <button class="kebab" type="button" aria-label="אפשרויות">
+      <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="12" cy="19" r="1.7"/></svg>
+    </button>
+  </div>
+
+  <!-- KPI GRID -->
+  <section class="kpi-grid" id="kpi-grid" aria-label="מדדים ראשיים"></section>
+
+  <!-- CHARTS -->
+  <section class="charts">
+    <div class="card reveal" style="animation-delay:.22s">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 6-7"/><path d="M16 8h3v3"/></svg></span>
+          הוצאה יומית
+        </div>
+        <div class="card-kpi"><b id="rev-total">—</b><span class="delta pos" id="rev-delta">—</span></div>
+      </div>
+      <div class="chart-wrap" id="rev-wrap"></div>
+      <div class="legend"><span><i style="background:linear-gradient(90deg,#7C5CFF,#9F86FF)"></i> הוצאה יומית ($)</span></div>
+    </div>
+
+    <div class="card reveal" style="animation-delay:.3s">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="4" height="9" rx="1.2"/><rect x="10" y="6" width="4" height="14" rx="1.2"/><rect x="16" y="9" width="4" height="11" rx="1.2"/></svg></span>
+          הוצאה לפי קמפיין
+        </div>
+        <div class="card-kpi"><b id="pur-total">—</b><span class="delta pos" id="pur-delta">—</span></div>
+      </div>
+      <div class="chart-wrap" id="pur-wrap"></div>
+      <div class="legend"><span><i style="background:#A98BFF"></i> הוצאה לפי קמפיין ($)</span></div>
+    </div>
+  </section>
+
+  <p class="attrib">המספרים נשלפו ישירות מ‑<bdi dir="ltr">Meta Ads API</bdi> · חשבון <bdi dir="ltr">ToChat (771217290712598)</bdi> · מטבע USD · טווח 31.5–6.6.2026 (דלתאות מול 24–30.5). ניתן לחבר גם <bdi dir="ltr">Google Ads</bdi>, <bdi dir="ltr">TikTok</bdi> ו‑CRM לתצוגה מאוחדת ב‑₪.</p>
+
+</div>
+
+<script>
+/* ================= DATA (replaced by workflow output) ================= */
+/* כל המספרים נשלפו ישירות מ-Meta Ads API — חשבון ToChat (771217290712598),
+   טווח 31.5–6.6.2026, מטבע USD. דלתאות = השוואה לשבוע הקודם (24–30.5.2026). */
+const DATA = {
+  "topbarTitle":"דשבורד עסקי","dateLabel":"7 ימים אחרונים","summaryTitle":"סיכום ביצועים · Meta Ads",
+  "accountName":"ToChat","accountId":"771217290712598","rangeLabel":"31 במאי – 6 ביוני 2026","currency":"USD",
+  "kpis":[
+    {"id":"spend","label":"הוצאת פרסום","display":"$2,489","sub":"ב-8 קמפיינים פעילים","delta":3.0,"trendUp":false,"positive":false,"neutral":true,"icon":"spend","tint":"#6366F1"},
+    {"id":"leads","label":"לידים","display":"43","sub":"טפסים ודפי נחיתה","delta":22.9,"trendUp":true,"positive":true,"icon":"lead","tint":"#22C55E"},
+    {"id":"cpl","label":"עלות לליד · CPL","display":"$57.9","sub":"הוצאה חלקי לידים","delta":21.0,"trendUp":false,"positive":true,"icon":"target","tint":"#EC4899"},
+    {"id":"reach","label":"Reach · משתמשים","display":"40,236","sub":"אנשים ייחודיים","delta":15.5,"trendUp":true,"positive":true,"icon":"reach","tint":"#0EA5E9"},
+    {"id":"impr","label":"חשיפות","display":"84,881","sub":"סך החשיפות בטווח","delta":11.5,"trendUp":true,"positive":true,"icon":"impr","tint":"#14B8A6"},
+    {"id":"clicks","label":"קליקים","display":"1,129","sub":"לעמודי הנחיתה","delta":19.3,"trendUp":true,"positive":true,"icon":"click","tint":"#8B5CF6"},
+    {"id":"ctr","label":"CTR · אחוז הקלקה","display":"1.33%","sub":"קליקים מתוך חשיפות","delta":7.0,"trendUp":true,"positive":true,"icon":"ratio","tint":"#A855F7"},
+    {"id":"cpc","label":"CPC · עלות לקליק","display":"$2.20","sub":"עלות ממוצעת לקליק","delta":18.7,"trendUp":false,"positive":true,"icon":"convert","tint":"#F59E0B"}
+  ],
+  "revenuePoints":[
+    {"label":"א׳","value":473.05},{"label":"ב׳","value":373.11},{"label":"ג׳","value":387.95},
+    {"label":"ד׳","value":318.75},{"label":"ה׳","value":355.61},{"label":"ו׳","value":300.58},{"label":"ש׳","value":280.36}
+  ],
+  "purchaseBars":[
+    {"label":"TOF·LP","value":602.08,"full":"TOF | LP Conversions"},
+    {"label":"LLA 3%","value":516.54,"full":"TOF | LP Conversion | LLA 3%"},
+    {"label":"Winners","value":476.86,"full":"Winners Campaign"},
+    {"label":"Forms","value":329.37,"full":"Full Funnel CBO | Forms"},
+    {"label":"Broad","value":319.92,"full":"TOF | LP Conversion | Broad Audience"},
+    {"label":"BOF","value":104.47,"full":"BOF │ LP Conversion"},
+    {"label":"SMB","value":91.39,"full":"TOF | LP Conversion | SMB"},
+    {"label":"Engage","value":48.78,"full":"Engagement | 21 Days Leads"}
+  ],
+  "notes":"Real Meta Ads API. spend 2489.41 USD; leads 43 (prev 35); CPL=spend/leads=57.89; reach 40236; impr 84881; clicks 1129; CTR 1.33; CPC 2.20. deltas vs 24-30.5 (spend 2565.45, leads 35)."
+};
+
+/* ================= Icons ================= */
+const ICONS = {
+  spend:'<path d="M12 2v20M17 5.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  revenue:'<path d="M3 17l5-5 4 3 6-7"/><path d="M16 8h3v3"/>',
+  target:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>',
+  ratio:'<path d="M5 19L19 5"/><circle cx="7" cy="7" r="2.2"/><circle cx="17" cy="17" r="2.2"/>',
+  profit:'<path d="M3 7h18M3 12h18M3 17h12"/><path d="M16.5 15l2.5 2.5 3-3.5"/>',
+  call:'<path d="M6.5 3h3.2l1.4 4.2-2 1.4a12 12 0 0 0 5.3 5.3l1.4-2 4.2 1.4v3.2a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3z"/>',
+  lead:'<circle cx="12" cy="8" r="3.4"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/>',
+  convert:'<path d="M4 7h11M4 7l3-3M4 7l3 3"/><path d="M20 17H9M20 17l-3-3M20 17l-3 3"/>',
+  impr:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  reach:'<circle cx="9" cy="8" r="3.1"/><path d="M3.4 20a5.6 5.6 0 0 1 11.2 0"/><path d="M16.5 5.3a3.1 3.1 0 0 1 0 6M21 20a5.6 5.6 0 0 0-4.2-5.4"/>',
+  click:'<path d="M5 4l6 16 2.4-6.6L20 11 5 4z"/>'
+};
+const PLAT = {
+  meta:'<svg viewBox="0 0 24 24"><path d="M12 7.5c1.6-2.7 3.3-4 5-4 2.6 0 4 2.4 4 6 0 3.8-1.6 7-4 7-1.9 0-3.2-1.8-5-5-1.8 3.2-3.1 5-5 5-2.4 0-4-3.2-4-7 0-3.6 1.4-6 4-6 1.7 0 3.4 1.3 5 4z" fill="none" stroke="#0866FF" stroke-width="2.1"/></svg>',
+  google:'<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M21.35 11.1H12v3.83h5.35a4.58 4.58 0 0 1-1.98 3v2.5h3.2c1.87-1.73 2.95-4.28 2.95-7.3 0-.7-.06-1.37-.17-2.03z"/><path fill="#34A853" d="M12 22c2.67 0 4.9-.88 6.54-2.4l-3.2-2.49c-.89.6-2.03.95-3.34.95-2.57 0-4.74-1.73-5.52-4.06H3.18v2.55A9.99 9.99 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.48 13.99a5.99 5.99 0 0 1 0-3.84V7.6H3.18a10 10 0 0 0 0 8.95l3.3-2.56z"/><path fill="#EA4335" d="M12 6.07c1.45 0 2.76.5 3.79 1.48l2.84-2.84A9.98 9.98 0 0 0 12 2 9.99 9.99 0 0 0 3.18 7.6l3.3 2.55C7.26 7.8 9.43 6.07 12 6.07z"/></svg>',
+  tiktok:'<svg viewBox="0 0 24 24"><path d="M16.5 3c.3 2.2 1.6 3.8 3.8 4v2.5c-1.4.1-2.7-.3-3.9-1v5.7a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a2.9 2.9 0 1 0 2 2.8V3h2.8z" fill="#fff"/></svg>',
+  insta:'<svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="#E1306C" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="#E1306C" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#E1306C"/></svg>',
+  whatsapp:'<svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="#25D366"/><path d="M8.4 7.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3-.1.5.2.5.7 1.2 1.4 1.7.8.6 1.4.8 1.7.9.2 0 .4 0 .5-.2l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.3.2.3.3 0 .6-.3 1.4-1.1 1.6-.7.2-1.6.2-3.4-.6-2.7-1.2-4.3-3.9-4.4-4.1-.1-.2-.6-.9-.6-1.7 0-.8.4-1.2.6-1.4z" fill="#fff"/></svg>'
+};
+
+/* ================= helpers ================= */
+const $=(s,r=document)=>r.querySelector(s);
+function fmt(n){return n.toLocaleString('en-US');}
+function arrowSVG(up){return up?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14l5-5 5 5"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5"/></svg>';}
+function seeded(seed){let s=seed%2147483647;if(s<=0)s+=2147483646;return()=>{s=s*16807%2147483647;return(s-1)/2147483646;};}
+function sparkSeries(seed,up){const r=seeded(seed*131+7);const n=13,a=[];let v=46+r()*12;for(let i=0;i<n;i++){v+=(r()-.5)*16+(up?2.1:-2.1);v=Math.max(10,Math.min(90,v));a.push(v);}return a;}
+
+/* smooth path (Catmull-Rom -> cubic bezier) */
+function smoothPath(pts){
+  if(pts.length<2)return '';
+  let d=`M ${pts[0][0]},${pts[0][1]}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+    const c1x=p1[0]+(p2[0]-p0[0])/6, c1y=p1[1]+(p2[1]-p0[1])/6;
+    const c2x=p2[0]-(p3[0]-p1[0])/6, c2y=p2[1]-(p3[1]-p1[1])/6;
+    d+=` C ${c1x},${c1y} ${c2x},${c2y} ${p2[0]},${p2[1]}`;
+  }
+  return d;
+}
+
+/* ================= render KPIs ================= */
+function renderKPIs(){
+  const wrap=$('#kpi-grid');wrap.innerHTML='';
+  DATA.kpis.forEach((k,idx)=>{
+    const up=k.trendUp, good=k.positive, neutral=!!k.neutral;
+    const sparkCol=neutral?'#9F86FF':(good?'#34D399':'#FF5C72');
+    const deltaCls=neutral?'neu':(good?'pos':'neg');
+    const ser=sparkSeries(idx+1,up);
+    const W=78,H=40,pad=3;
+    const max=Math.max(...ser),min=Math.min(...ser),rng=(max-min)||1;
+    const pts=ser.map((v,i)=>[pad+i*(W-2*pad)/(ser.length-1), H-pad-((v-min)/rng)*(H-2*pad)]);
+    const line=smoothPath(pts);
+    const area=`${line} L ${pts[pts.length-1][0]},${H} L ${pts[0][0]},${H} Z`;
+    const col=good?'var(--green)':'var(--red)';
+    const gid='sg'+idx;
+    const card=document.createElement('article');
+    card.className='kpi reveal';card.style.setProperty('--tint',k.tint);card.style.animationDelay=(0.08+idx*0.03)+'s';
+    card.innerHTML=`
+      <div class="kpi-top">
+        <span class="kpi-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[k.icon]||''}</svg></span>
+        <span class="kpi-label">${k.label}</span>
+      </div>
+      <div class="kpi-mid">
+        <div>
+          <div class="kpi-value"><bdi>${k.display}</bdi></div>
+          <div class="kpi-sub"><bdi>${k.sub||''}</bdi></div>
+        </div>
+        <svg class="kpi-spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="${sparkCol}" stop-opacity=".35"/>
+            <stop offset="1" stop-color="${sparkCol}" stop-opacity="0"/>
+          </linearGradient></defs>
+          <path d="${area}" fill="url(#${gid})"/>
+          <path d="${line}" fill="none" stroke="${sparkCol}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="${pts[pts.length-1][0]}" cy="${pts[pts.length-1][1]}" r="2.6" fill="${sparkCol}"/>
+        </svg>
+      </div>
+      <div class="kpi-foot">
+        <span class="delta ${deltaCls}">${arrowSVG(up)} ${Math.abs(k.delta)}%</span>
+        <span class="vs">מול 7 הימים הקודמים</span>
+      </div>`;
+    wrap.appendChild(card);
+  });
+}
+
+/* ================= render platforms ================= */
+function renderPlatforms(){
+  const order=['meta','insta'];
+  const el=$('#platforms');el.innerHTML='';
+  order.forEach(p=>{const d=document.createElement('span');d.className='pf';d.innerHTML=PLAT[p];el.appendChild(d);});
+}
+
+/* ================= render revenue area chart ================= */
+function renderRevenue(){
+  const pts0=DATA.revenuePoints;
+  const W=620,H=240,L=14,R=14,T=26,B=34;
+  const max=Math.max(...pts0.map(p=>p.value))*1.12, min=0;
+  const x=i=>L+i*(W-L-R)/(pts0.length-1);
+  const y=v=>T+(1-(v-min)/(max-min))*(H-T-B);
+  const pts=pts0.map((p,i)=>[x(i),y(p.value)]);
+  const line=smoothPath(pts);
+  const area=`${line} L ${pts[pts.length-1][0]},${H-B} L ${pts[0][0]},${H-B} Z`;
+  // grid
+  let grid='';for(let g=0;g<=3;g++){const gy=T+g*(H-T-B)/3;grid+=`<line x1="${L}" y1="${gy}" x2="${W-R}" y2="${gy}" stroke="var(--grid)" stroke-width="1"/>`;}
+  // x labels
+  let xl='';pts0.forEach((p,i)=>{xl+=`<text x="${x(i)}" y="${H-12}" fill="var(--text-3)" font-size="11" font-family="Heebo" text-anchor="middle">${p.label}</text>`;});
+  // dots + value labels
+  let dots='';pts0.forEach((p,i)=>{
+    const vx=x(i),vy=y(p.value);
+    const lbl='$'+Math.round(p.value);
+    dots+=`<g class="dot-hit" data-i="${i}"><circle cx="${vx}" cy="${vy}" r="11" fill="transparent"/><text x="${vx}" y="${vy-11}" fill="#D2C9FF" font-size="10.5" font-weight="700" font-family="Heebo" text-anchor="middle">${lbl}</text><circle cx="${vx}" cy="${vy}" r="3.6" fill="#0B0B16" stroke="#9F86FF" stroke-width="2.4"/></g>`;
+  });
+  const total=pts0.reduce((s,p)=>s+p.value,0);
+  $('#rev-total').textContent='$'+fmt(Math.round(total));
+  $('#rev-wrap').innerHTML=`
+    <svg viewBox="0 0 ${W} ${H}">
+      <defs>
+        <linearGradient id="revfill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7C5CFF" stop-opacity=".42"/>
+          <stop offset=".7" stop-color="#7C5CFF" stop-opacity=".06"/>
+          <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="revline" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6D5CFF"/><stop offset="1" stop-color="#A98BFF"/>
+        </linearGradient>
+      </defs>
+      ${grid}
+      <path d="${area}" fill="url(#revfill)"/>
+      <path id="revpath" d="${line}" fill="none" stroke="url(#revline)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      ${dots}${xl}
+    </svg>
+    <div class="tt" id="rev-tt"></div>`;
+  // animate stroke
+  const path=$('#revpath');if(path&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const len=path.getTotalLength();path.style.strokeDasharray=len;path.style.strokeDashoffset=len;path.getBoundingClientRect();path.style.transition='stroke-dashoffset 1.1s ease';requestAnimationFrame(()=>path.style.strokeDashoffset=0);}
+  // tooltip
+  const wrap=$('#rev-wrap'),tt=$('#rev-tt');
+  wrap.querySelectorAll('.dot-hit').forEach(g=>{
+    g.addEventListener('mouseenter',()=>{const i=+g.dataset.i;const p=pts0[i];const rect=wrap.getBoundingClientRect();const cx=x(i)/W*rect.width,cy=y(p.value)/H*rect.height;tt.innerHTML=`<bdi>${p.label}</bdi> · <b><bdi>$${p.value.toFixed(2)}</bdi></b>`;tt.style.left=cx+'px';tt.style.top=(cy-14)+'px';tt.classList.add('show');});
+    g.addEventListener('mouseleave',()=>tt.classList.remove('show'));
+  });
+}
+
+/* ================= render purchases bar chart ================= */
+function renderPurchases(){
+  const bars=DATA.purchaseBars;
+  const W=520,H=240,L=18,R=12,T=22,B=34;
+  const max=Math.max(...bars.map(b=>b.value))*1.15;
+  const bw=Math.min(34,(W-L-R)/bars.length*0.52);
+  const step=(W-L-R)/bars.length;
+  let grid='';for(let g=0;g<=3;g++){const gy=T+g*(H-T-B)/3;grid+=`<line x1="${L}" y1="${gy}" x2="${W-R}" y2="${gy}" stroke="var(--grid)" stroke-width="1"/>`;}
+  let rects='';bars.forEach((b,i)=>{
+    const h=(b.value/max)*(H-T-B);
+    const bx=L+step*i+step/2-bw/2;
+    const by=H-B-h;
+    rects+=`<g class="bar-g" data-i="${i}">
+      <rect x="${bx-4}" y="${T}" width="${bw+8}" height="${H-B-T}" fill="transparent"/>
+      <rect class="bar-rect" x="${bx}" y="${by}" width="${bw}" height="${h}" rx="6" fill="url(#bargrad)">
+        <animate attributeName="height" from="0" to="${h}" dur="0.7s" begin="${0.05*i}s" fill="freeze" calcMode="spline" keySplines="0.2 0.7 0.2 1" keyTimes="0;1" values="0;${h}"/>
+        <animate attributeName="y" from="${H-B}" to="${by}" dur="0.7s" begin="${0.05*i}s" fill="freeze" calcMode="spline" keySplines="0.2 0.7 0.2 1" keyTimes="0;1" values="${H-B};${by}"/>
+      </rect>
+      <text x="${bx+bw/2}" y="${H-11}" fill="var(--text-2)" font-size="10" font-family="Heebo" text-anchor="middle">${b.label}</text>
+    </g>`;
+  });
+  $('#pur-total').textContent='$'+fmt(Math.round(bars.reduce((s,b)=>s+b.value,0)));
+  $('#pur-wrap').innerHTML=`
+    <svg viewBox="0 0 ${W} ${H}">
+      <defs><linearGradient id="bargrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#B79BFF"/><stop offset="1" stop-color="#7C5CFF"/>
+      </linearGradient></defs>
+      ${grid}${rects}
+    </svg>
+    <div class="tt" id="pur-tt"></div>`;
+  const wrap=$('#pur-wrap'),tt=$('#pur-tt');
+  wrap.querySelectorAll('.bar-g').forEach(g=>{
+    g.addEventListener('mouseenter',()=>{const i=+g.dataset.i;const b=bars[i];const rect=wrap.getBoundingClientRect();const bx=(L+step*i+step/2)/W*rect.width;tt.innerHTML=`<bdi dir="ltr">${b.full||b.label}</bdi> · <b><bdi>$${b.value.toFixed(2)}</bdi></b>`;tt.style.left=bx+'px';tt.style.top='6px';tt.classList.add('show');});
+    g.addEventListener('mouseleave',()=>tt.classList.remove('show'));
+  });
+}
+
+/* ================= delta headers for charts ================= */
+function chartDeltas(){
+  const sk=DATA.kpis.find(k=>k.id==='spend');
+  if(sk){const d=$('#rev-delta');d.className='delta neu';d.innerHTML=arrowSVG(sk.trendUp)+' '+Math.abs(sk.delta)+'%';}
+  const pd=$('#pur-delta');if(pd){pd.className='delta neu';pd.textContent=DATA.purchaseBars.length+' קמפיינים';}
+}
+
+/* ================= init ================= */
+function init(){
+  $('#date-label').textContent=DATA.dateLabel||'7 ימים אחרונים';
+  $('#summary-title').textContent=DATA.summaryTitle||'סיכום ביצועים';
+  const sub=$('#summary-sub');if(sub)sub.textContent=DATA.rangeLabel+' · חשבון '+DATA.accountName;
+  const src=$('#src-badge');if(src)src.insertAdjacentText('beforeend','Meta Ads · מחובר');
+  renderPlatforms();renderKPIs();renderRevenue();renderPurchases();chartDeltas();
+}
+init();
+</script>
+</body>
+</html>
