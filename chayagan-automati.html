@@ -424,10 +424,11 @@ body.enable-toolbar-open #enable-toolbar-content{
 
 /* ===== STATS BAND ===== */
 .stats{padding:96px 32px 70px;background:#fff}
-.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
 .stat-num{font-size:54px;font-weight:800;color:#121927;letter-spacing:normal;line-height:1;margin-bottom:10px}
 .stat-label{font-size:15px;color:#5b6478;font-weight:600;line-height:1.4}
 .stats-note{max-width:900px;margin:26px auto 0;text-align:center;font-size:12.5px;color:#6B7280;line-height:1.5}
+@media(max-width:560px){.stats-inner>.reveal{padding-bottom:20px;border-bottom:1px solid #e5e7eb}.stats-inner>.reveal:last-child{padding-bottom:0;border-bottom:none}}
 
 /* ===== SECTION GENERIC ===== */
 .section{padding:100px 32px}
@@ -599,7 +600,7 @@ body.enable-toolbar-open #enable-toolbar-content{
   .calls-table th,.calls-table td{padding:8px 6px}
 
   .stats{padding:72px 20px 56px}
-  .stats-inner{grid-template-columns:repeat(2,1fr);gap:36px 20px}
+  .stats-inner{grid-template-columns:repeat(3,1fr);gap:36px 20px}
   .stat-num{font-size:40px}
   .stat-label{font-size:14px}
 
@@ -677,8 +678,8 @@ body.enable-toolbar-open #enable-toolbar-content{
   .status-pill{font-size:11px;padding:2px 7px}
 
   .stats{padding:56px 16px 46px}
-  .stats-inner{grid-template-columns:repeat(2,1fr);gap:28px 16px}
-  .stat-num{font-size:32px}
+  .stats-inner{grid-template-columns:1fr;gap:24px}
+  .stat-num{font-size:36px}
   .stat-label{font-size:13px}
 
   .section{padding:54px 16px}
