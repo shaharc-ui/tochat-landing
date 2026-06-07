@@ -268,20 +268,15 @@ body{overscroll-behavior-y:contain}
 
 /* ===== ENABLE ACCESSIBILITY WIDGET - move button to LEFT side ===== */
 #enable-toolbar-trigger,
-[id*="enable-toolbar"],
+#INDmenu-btn,
 [id*="enable-mat-btn"],
-.enable-mat-btn,
-#INDmenu-btn{
+.enable-mat-btn{
   right:auto !important;
   left:5px !important;
-}
-/* Keep toolbar collapsed until user clicks the trigger */
-#enable-toolbar-content{
-  transform:translateX(-110%) !important;
-  transition:transform .3s ease !important;
-}
-body.enable-toolbar-open #enable-toolbar-content{
-  transform:translateX(0) !important;
+  z-index:9990 !important;
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
 }
 
 /* ===== SKIP LINK (a11y) ===== */
@@ -574,7 +569,7 @@ body.enable-toolbar-open #enable-toolbar-content{
 @media (max-width:980px){
   .sticky-mobile-cta{display:block}
   body.has-sticky{padding-bottom:calc(78px + env(safe-area-inset-bottom,0))}
-  #enable-toolbar-trigger,[id*="enable-toolbar"],[id*="enable-mat-btn"],.enable-mat-btn,#INDmenu-btn{bottom:calc(82px + env(safe-area-inset-bottom,0)) !important}
+  #enable-toolbar-trigger,#INDmenu-btn,[id*="enable-mat-btn"],.enable-mat-btn{bottom:calc(82px + env(safe-area-inset-bottom,0)) !important}
 }
 
 /* ===== RESPONSIVE - TABLET 980px ===== */
@@ -1336,6 +1331,7 @@ if(stickyCta && formEl){
   const applySticky = () => {
     const hide = heroVisible || formVisible;
     stickyCta.style.opacity = hide ? '0' : '1';
+    stickyCta.style.visibility = hide ? 'hidden' : 'visible';
     stickyCta.style.pointerEvents = hide ? 'none' : 'auto';
     document.body.classList.toggle('has-sticky', !hide);
   };
